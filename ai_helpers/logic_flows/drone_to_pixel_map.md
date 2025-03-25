@@ -1,92 +1,99 @@
-# AI Logic Flow – Drone Mapping to Pixel Layout Plan
+# AI Logic Flow – Drone-to-Pixel Mapping for FJRC Pixel Farming
 
-This file defines how the GPT should convert a visual space (from drone imagery or dimensions) into a functional grid of 2'x2' pixel blocks, and assign guilds across the layout based on function, environment, and bloom strategy.
-
----
-
-## STEP 1: GET THE SPACE DIMENSIONS
-
-If a drone image is not available, ask for:
-- Total area dimensions (e.g., 10’ x 20’)
-- General orientation (e.g., south-facing, shaded left side)
-- Notable obstacles (e.g., tree, shed, walkway)
-- Soil condition and sun exposure per section if known
+This document outlines how the AI can take aerial imagery (drone or satellite), interpret the space, and create a 2'x2' pixel grid for assigning guilds.
 
 ---
 
-## STEP 2: GRID THE SPACE
+## STEP 1: INPUT DATA ACQUISITION
 
-- Divide the space into 2’x2’ units
-- Label each as a **pixel coordinate** (e.g., A1, A2, B1, etc.)
-- Determine available pixel count and layout structure
-  - Example: 10x20 space = 5 pixels wide by 10 pixels long = 50 total pixels
+**User Input** may include:
+- Drone images or satellite images
+- Approximate dimensions (length/width in feet or meters)
+- Additional notes on existing trees, shade, slope
 
-Store grid as a 2D array with placeholders for guild assignment.
-
----
-
-## STEP 3: DEFINE ZONE CONDITIONS
-
-If drone data is available (optional):
-- Use elevation, slope, or light detection (via LiDAR or sunlight modeling)
-- Segment layout by condition:
-  - Full sun
-  - Partial shade
-  - Moist vs dry areas
-
-Assign **zone tags** to each pixel:  
-`A1: full_sun`, `B3: partial_shade`, etc.
+The AI cannot directly parse raw images (unless integrated with a vision model), so it relies on:
+- User-provided dimension data
+- Possibly a processed map overlay with coordinates
 
 ---
 
-## STEP 4: ASSIGN GUILDS
+## STEP 2: DIMENSIONAL ANALYSIS
 
-For each pixel:
-- Match to a compatible guild from the library based on:
-  - Environmental tag (sun, soil)
-  - Visual diversity
-  - Crop function (pollinator, yield, visual, healing, etc.)
-- Avoid repeating the same guild in adjacent blocks if diversity is prioritized
-
-Optionally follow design themes:
-- Mandala
-- Glyph (words, shapes)
-- Fractal symmetry
-- Functional zoning (center = yield, edges = pollinators)
+1. **Identify total area** in square feet (e.g., 20' x 30' = 600 sq ft).
+2. **Divide** by 4 sq ft per pixel block (2'x2').
+3. **Calculate** the potential number of pixels (600 ÷ 4 = 150 pixels).
+4. **Note** any unplantable areas (structures, paths, existing trees).
 
 ---
 
-## STEP 5: OUTPUT LAYOUT PLAN
+## STEP 3: ZONE SEGMENTATION
 
-Return:
-- Grid visualization (markdown table or SVG-ready array)
-- Guild assignment map:
-  - A1 → A1_Kitchen_Block
-  - A2 → A2_Salad_Block
-- Optional bloom forecast timeline (color-coded)
+If the yard has distinct zones:
+- Full sun vs. partial shade
+- Different soil types or slopes
+- Water source proximity
 
-Example Output:
-
-|     |  A  |  B  |  C  |  D  |
-|-----|-----|-----|-----|-----|
-|  1  | A1  | A2  | A3  | A4  |
-|  2  | A2  | A3  | A4  | A1  |
-|  3  | A3  | A1  | A2  | A3  |
+Break the map into smaller segments. Each segment is assigned:
+- A sun/soil classification
+- A “max pixel capacity”
 
 ---
 
-## STEP 6: OFFER NEXT ACTION
+## STEP 4: PIXEL GRID CREATION
 
-After layout, ask user:
-- Would you like to generate a printable planting plan?
-- Want to simulate bloom color over time?
-- Ready to create a care guide or resource estimate?
+For each segment:
+1. Determine how many 2'x2' blocks fit.
+2. Number them in a consistent pattern (row by row, or spiral, etc.).
+3. Optionally, note paths or walkways between pixel rows (1–2 ft buffer).
 
 ---
 
-## END GOAL
+## STEP 5: GUILD ASSIGNMENT
 
-The AI should be able to:
-- Convert a user’s yard dimensions or drone photo into a grid
-- Assign meaningful guilds across the layout
-- Provide install plans, seasonal visuals, and care schedules
+Once the AI has a grid:
+1. Evaluate **environment** for each pixel or segment (sun, soil, slope).
+2. Pull from **Guild Selection Logic** (`guild_selection_logic.md`).
+3. Assign each pixel a suitable guild code.
+
+Optionally, the user can:
+- Request specific patterns (letters, symbols, fractals)
+- Force certain guilds in certain spots
+
+---
+
+## STEP 6: OUTPUT
+
+### 1. Layout Map
+A textual or coded representation of each row/column:
+Each pixel references the chosen guild.
+
+### 2. Summaries
+- **Total pixel count** used
+- **Guild distribution** (e.g., 10 blocks of A1, 5 blocks of A2, etc.)
+- **Estimated bloom/harvest** timeline
+
+### 3. Visual Overlays (Optional)
+If integrated with a mapping tool, the AI can produce an overlay or coordinate grid referencing real-world lat/long or top-left offsets.
+
+---
+
+## STEP 7: USER CONFIRMATION & EDITS
+
+- The AI presents the layout
+- The user can reorder or swap guilds
+- The AI finalizes a “Garden Plan” for printing or app-based guidance
+
+---
+
+## FUTURE ENHANCEMENTS
+
+- Integrate with CV models to detect existing plant structures from drone imagery
+- Dynamically adapt pixel size for irregular shapes
+- 3D slope analysis for advanced water flow and terrace guilding
+- Real-time progress tracking with weekly drone scans
+
+---
+
+## SUMMARY
+
+This logic flow transforms an overhead yard dimension or image into a **pixel-based garden** with assigned guilds, respecting the environment, user goals, and aesthetic patterns. It merges the **Drone or map data** with the **FJRC Pixel Farming** approach—turning raw space into a living mosaic of food and ecology.
