@@ -1,0 +1,16 @@
+{
+    "name": "Oregano",
+    "scientific_name": "Origanum vulgare",
+    "type": "herb",
+    "sun": "full",
+    "root_depth": "shallow",
+    "height": "low",
+    "bloom_window": ["June", "August"],
+    "companion_plants": ["tomato", "pepper", "basil"],
+    "antagonistic_plants": ["cucumber"],
+    "guild_roles": ["ground_cover", "flavor_booster", "pest deterrent"],
+    "pest_resistance": ["aphids", "ants"],
+    "uses": ["culinary", "medicinal", "ground cover"],
+    "notes": "Low-maintenance, strong aroma, thrives in dry conditions."
+  }
+  

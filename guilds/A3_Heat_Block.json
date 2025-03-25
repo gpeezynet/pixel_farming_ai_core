@@ -1,0 +1,36 @@
+{
+    "guild_code": "A3",
+    "name": "Heat Shield Block",
+    "plants": [
+      {
+        "name": "Pepper",
+        "type": "vegetable",
+        "position": "center",
+        "height": "mid"
+      },
+      {
+        "name": "Oregano",
+        "type": "herb",
+        "position": "corner_1",
+        "height": "low"
+      },
+      {
+        "name": "Borage",
+        "type": "flower",
+        "position": "corner_2",
+        "height": "mid"
+      },
+      {
+        "name": "Marigold",
+        "type": "flower",
+        "position": "corner_3",
+        "height": "mid"
+      }
+    ],
+    "environment": "Full Sun",
+    "soil_depth": "8in",
+    "bloom_window": ["June", "September"],
+    "harvest": ["Pepper", "Oregano"],
+    "function": ["heat resistant", "pollinator", "pest deterrent"]
+  }
+  

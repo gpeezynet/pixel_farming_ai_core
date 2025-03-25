@@ -1,0 +1,36 @@
+{
+    "guild_code": "A2",
+    "name": "Salad Block",
+    "plants": [
+      {
+        "name": "Lettuce",
+        "type": "vegetable",
+        "position": "center",
+        "height": "low"
+      },
+      {
+        "name": "Calendula",
+        "type": "flower",
+        "position": "corner_1",
+        "height": "mid"
+      },
+      {
+        "name": "Chives",
+        "type": "herb",
+        "position": "corner_2",
+        "height": "low"
+      },
+      {
+        "name": "Cilantro",
+        "type": "herb",
+        "position": "corner_3",
+        "height": "low"
+      }
+    ],
+    "environment": "Partial Sun",
+    "soil_depth": "6in",
+    "bloom_window": ["May", "July"],
+    "harvest": ["Lettuce", "Cilantro", "Chives"],
+    "function": ["culinary", "pollinator", "soil cooling"]
+  }
+  

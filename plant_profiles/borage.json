@@ -1,0 +1,16 @@
+{
+    "name": "Borage",
+    "scientific_name": "Borago officinalis",
+    "type": "flower",
+    "sun": "full",
+    "root_depth": "medium",
+    "height": "mid",
+    "bloom_window": ["May", "September"],
+    "companion_plants": ["tomato", "strawberry"],
+    "antagonistic_plants": [],
+    "guild_roles": ["pollinator_draw", "soil_builder", "visual"],
+    "pest_resistance": ["tomato hornworm"],
+    "uses": ["pollinator", "compost", "edible flower"],
+    "notes": "Excellent bee plant. Self-seeds easily."
+  }
+  

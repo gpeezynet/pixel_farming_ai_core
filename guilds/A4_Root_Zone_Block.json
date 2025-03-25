@@ -1,0 +1,36 @@
+{
+    "guild_code": "A4",
+    "name": "Root Zone Block",
+    "plants": [
+      {
+        "name": "Carrot",
+        "type": "root",
+        "position": "center",
+        "height": "low"
+      },
+      {
+        "name": "Garlic",
+        "type": "root",
+        "position": "corner_1",
+        "height": "low"
+      },
+      {
+        "name": "Radish",
+        "type": "root",
+        "position": "corner_2",
+        "height": "low"
+      },
+      {
+        "name": "Chamomile",
+        "type": "flower",
+        "position": "corner_3",
+        "height": "low"
+      }
+    ],
+    "environment": "Loamy Soil",
+    "soil_depth": "10in",
+    "bloom_window": ["May", "July"],
+    "harvest": ["Carrot", "Radish", "Garlic"],
+    "function": ["root crop", "soil builder", "pollinator"]
+  }
+  

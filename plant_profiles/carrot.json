@@ -1,0 +1,16 @@
+{
+    "name": "Carrot",
+    "scientific_name": "Daucus carota",
+    "type": "root",
+    "sun": "full",
+    "root_depth": "deep",
+    "height": "low",
+    "bloom_window": [],
+    "companion_plants": ["onion", "chives", "lettuce"],
+    "antagonistic_plants": ["dill"],
+    "guild_roles": ["anchor_crop", "soil_builder"],
+    "pest_resistance": ["leafhoppers"],
+    "uses": ["culinary", "root crop"],
+    "notes": "Prefers loose, well-drained soil."
+  }
+  
