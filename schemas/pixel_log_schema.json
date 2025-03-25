@@ -1,0 +1,59 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Pixel Block Log Schema",
+    "type": "object",
+    "required": ["pixel_id", "guild_code", "planted_on", "location", "yield"],
+    "properties": {
+      "pixel_id": {
+        "type": "string",
+        "description": "Unique identifier for the pixel block (e.g., A1-001)"
+      },
+      "guild_code": {
+        "type": "string",
+        "description": "Refers to the guild used (e.g., A1)"
+      },
+      "location": {
+        "type": "object",
+        "properties": {
+          "latitude": { "type": "number" },
+          "longitude": { "type": "number" },
+          "zone": { "type": "string" }
+        },
+        "required": ["latitude", "longitude"]
+      },
+      "planted_on": {
+        "type": "string",
+        "format": "date"
+      },
+      "bloom_start": {
+        "type": "string",
+        "format": "date"
+      },
+      "harvest_dates": {
+        "type": "array",
+        "items": { "type": "string", "format": "date" }
+      },
+      "yield": {
+        "type": "object",
+        "description": "Yield of crops in weight, volume, or count",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "sunlight_hours_avg": {
+        "type": "number",
+        "description": "Average daily sunlight exposure"
+      },
+      "watering_liters_per_week": {
+        "type": "number"
+      },
+      "pests_observed": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "notes": {
+        "type": "string"
+      }
+    }
+  }
+  
