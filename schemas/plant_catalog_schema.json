@@ -1,0 +1,78 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Plant Catalog Entry Schema",
+    "type": "object",
+    "required": ["name", "type", "sun", "root_depth", "height", "bloom_window", "guild_roles"],
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Common name of the plant (e.g., Basil)"
+      },
+      "scientific_name": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["fruit", "vegetable", "herb", "flower", "root", "cover crop", "medicinal"]
+      },
+      "sun": {
+        "type": "string",
+        "enum": ["full", "partial", "shade"]
+      },
+      "root_depth": {
+        "type": "string",
+        "enum": ["shallow", "medium", "deep"]
+      },
+      "height": {
+        "type": "string",
+        "enum": ["low", "mid", "tall"]
+      },
+      "bloom_window": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Months when the plant flowers (e.g., ['May', 'July'])"
+      },
+      "companion_plants": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Known companion plants"
+      },
+      "antagonistic_plants": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Known plants that should not be planted nearby"
+      },
+      "guild_roles": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "anchor_crop",
+            "repellent",
+            "pollinator_draw",
+            "ground_cover",
+            "soil_builder",
+            "medicinal",
+            "flavor_booster",
+            "shade_provider",
+            "trap_crop"
+          ]
+        },
+        "description": "Functional roles in a guild"
+      },
+      "pest_resistance": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Pests this plant naturally deters"
+      },
+      "uses": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Culinary, Medicinal, Visual, Compost, etc."
+      },
+      "notes": {
+        "type": "string"
+      }
+    }
+  }
+  
