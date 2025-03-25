@@ -1,0 +1,36 @@
+{
+    "guild_code": "A1",
+    "name": "Kitchen Block",
+    "plants": [
+      {
+        "name": "Tomato",
+        "type": "fruit",
+        "position": "center",
+        "height": "tall"
+      },
+      {
+        "name": "Basil",
+        "type": "herb",
+        "position": "corner_1",
+        "height": "mid"
+      },
+      {
+        "name": "Chives",
+        "type": "herb",
+        "position": "corner_2",
+        "height": "low"
+      },
+      {
+        "name": "Marigold",
+        "type": "flower",
+        "position": "corner_3",
+        "height": "mid"
+      }
+    ],
+    "environment": "Full Sun",
+    "soil_depth": "8in",
+    "bloom_window": ["June", "August"],
+    "harvest": ["Tomato", "Basil", "Chives"],
+    "function": ["culinary", "pollinator", "pest deterrent"]
+  }
+  
