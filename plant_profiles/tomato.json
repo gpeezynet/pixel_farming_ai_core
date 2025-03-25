@@ -1,0 +1,16 @@
+{
+    "name": "Tomato",
+    "scientific_name": "Solanum lycopersicum",
+    "type": "fruit",
+    "sun": "full",
+    "root_depth": "deep",
+    "height": "tall",
+    "bloom_window": ["June", "August"],
+    "companion_plants": ["Basil", "Chives", "Marigold", "Carrot"],
+    "antagonistic_plants": ["Potato", "Corn", "Cabbage"],
+    "guild_roles": ["anchor_crop", "shade_provider"],
+    "pest_resistance": [],
+    "uses": ["Culinary", "Preservation", "Seed Saving"],
+    "notes": "Tomatoes benefit from basil and marigold. Requires staking and consistent watering. Susceptible to fungal diseases in high humidity."
+  }
+  

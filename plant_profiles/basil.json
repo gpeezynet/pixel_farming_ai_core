@@ -1,0 +1,16 @@
+{
+    "name": "Basil",
+    "scientific_name": "Ocimum basilicum",
+    "type": "herb",
+    "sun": "full",
+    "root_depth": "shallow",
+    "height": "mid",
+    "bloom_window": ["July", "August"],
+    "companion_plants": ["Tomato", "Chives", "Marigold"],
+    "antagonistic_plants": ["Rue"],
+    "guild_roles": ["flavor_booster", "repellent", "anchor_crop"],
+    "pest_resistance": ["aphids", "whiteflies", "mosquitoes"],
+    "uses": ["Culinary", "Aromatic", "Pest Control"],
+    "notes": "Improves the flavor and yield of tomatoes. Repels common pests. Best harvested before flowering."
+  }
+  
